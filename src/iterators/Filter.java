@@ -2,8 +2,6 @@ package iterators;
 
 
 import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
 
 // Iterator that uses a Predicate to filter out elements from the input
 public class Filter<T> extends FlatApply<T,T> {

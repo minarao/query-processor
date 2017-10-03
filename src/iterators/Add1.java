@@ -21,5 +21,6 @@ public class Add1 implements Iterator{
 
 		@Override
 		public Integer next() {
+				
 		}
 }

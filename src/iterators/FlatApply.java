@@ -2,7 +2,6 @@ package iterators;
 
 
 import java.util.Iterator;
-import java.util.LinkedList;
 
 // Iterator that may produce 0 or more output elements for every input element
 public class FlatApply<InT,OutT> implements Iterator<OutT> {
