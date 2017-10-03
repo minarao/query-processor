@@ -15,7 +15,7 @@ public class AddXTest {
 		public void emptyTest() {
 			Integer[] inputValues = {};
 			List<Integer> input = Arrays.asList(inputValues);
-                        AddXTest op = new AddXTest(1, input.iterator());
+                        AddX op = new AddX(1, input.iterator());
 			assertEquals(false, op.hasNext());
 			assertEquals(false, op.hasNext());
 		}
@@ -24,7 +24,7 @@ public class AddXTest {
 		public void oneTest() {
 			Integer[] inputValues = {100};
 			List<Integer> input = Arrays.asList(inputValues);
-                         AddXTest op = new AddXTest(10, input.iterator());
+                         AddX op = new AddX(10, input.iterator());
 			assertEquals(true, op.hasNext());
 			assertEquals(true, op.hasNext());
 			assertEquals(110, (int)op.next());
@@ -37,7 +37,7 @@ public class AddXTest {
 			Integer[] inputValues = {10,50,1,400};
 			List<Integer> input = Arrays.asList(inputValues);
 			//Apply<Integer,Integer> op = new Apply<>(new TimesTwo(), input.iterator());
-                        AddXTest op = new AddXTest(10, input.iterator());
+                        AddX op = new AddX(10, input.iterator());
 
 			assertEquals(true, op.hasNext());
 			assertEquals(true, op.hasNext());

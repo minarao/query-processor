@@ -61,10 +61,10 @@ public class IntApplyTest {
 		}
 		
 
-	private class TimesTwo implements ApplyFunction<Integer, Integer> {
+	private class TimesTwo implements IntApplyFunction {
                 /* Multiply input by 2 */
 				@Override
-				public Integer apply(Integer x) {
+				public int apply(int x) {
 					return x*2;
 				}
 		}
