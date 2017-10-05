@@ -14,8 +14,8 @@ import java.util.Iterator;
 public class FlightsQuery {
 
 		public static void main(String[] args) throws IOException {
-			//Iterator<String> lines = new LineFileReader("flights-small.csv"); // expects answer: 520718
-			Iterator<String> lines = new LineFileReader("flights-tiny.csv"); // expects answer: 5
+			//Iterator<String> lines = new LineFileReader("../flights-small.csv"); // expects answer: 520718
+			Iterator<String> lines = new LineFileReader("../flights-tiny.csv"); // expects answer: 5
 			Iterator<Object[]> recordsGeneric = new Apply<>(new ParseCSVLine(), lines);
 			Iterator<FlightRecord> records = new Apply<>(new ConvertToRecord(), recordsGeneric);
 

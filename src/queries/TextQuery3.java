@@ -11,7 +11,7 @@ import readers.TextFileReader;
 // return all filenames that contain the word "Mars" 
 public class TextQuery3 {
 	public static void main(String[] args) {
-		Iterator<Pair<String,String>> filenameAndContents = new TextFileReader("sci.space");
+		Iterator<Pair<String,String>> filenameAndContents = new TextFileReader("../sci.space");
 		
 		/* finish the query using a combination of Applys and Filters */
 		

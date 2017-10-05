@@ -14,7 +14,7 @@ import readers.TextFileReader;
 // Returns all the words longer than 24 characters
 public class TextQuery2 {
 	public static void main(String[] args) {
-		Iterator<Pair<String,String>> filenameAndContents = new TextFileReader("sci.space");
+		Iterator<Pair<String,String>> filenameAndContents = new TextFileReader("../sci.space");
 		Iterator<String> contents = new Apply(new TakeRight<>(), filenameAndContents);
 		Iterator<String> words = new FlatApply<>(new SplitBy("[ .!,:<>@=*_()/\\t~#\"|-]"), contents); 
 		Iterator<String> longWords = new FlatApply<>(new LongerThan(24), words);

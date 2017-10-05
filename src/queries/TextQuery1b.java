@@ -9,7 +9,7 @@ import readers.TextFileReader;
 // return the 12th word in every file
 public class TextQuery1b {
 	public static void main(String[] args) {
-		Iterator<Pair<String,String>> filenameAndContents = new TextFileReader("sci.space");
+		Iterator<Pair<String,String>> filenameAndContents = new TextFileReader("../sci.space");
 		Iterator<String> contents = new Apply(new TakeRight<>(), filenameAndContents);
 	    Iterator<String> TwelthWords = new Apply(new TwelfthWord(), contents);
 
