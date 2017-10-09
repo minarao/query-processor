@@ -41,6 +41,19 @@ public class IntApplyTest {
 			assertEquals(false, op.hasNext());
 			assertEquals(false, op.hasNext());
 		}
+
+		@Test
+		public void PlusTest() {
+			Integer[] inputValues = {100};
+			List<Integer> input = Arrays.asList(inputValues);
+                         IntApply op = new IntApply(new PlusOne(), input.iterator());
+
+			assertEquals(true, op.hasNext());
+			assertEquals(true, op.hasNext());
+			assertEquals(101, (int)op.next());
+			assertEquals(false, op.hasNext());
+			assertEquals(false, op.hasNext());
+		}
 		
 		@Test
 		public void moreTest() {
@@ -66,6 +79,13 @@ public class IntApplyTest {
 				@Override
 				public int apply(int x) {
 					return x*2;
+				}
+		}
+	private class PlusOne implements IntApplyFunction {
+                /* add 1 to the input  */
+				@Override
+				public int apply(int x) {
+					return x+1;
 				}
 		}
 }
