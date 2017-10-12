@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class TextFileReader implements Iterator<Pair<String,String>> {
@@ -15,6 +16,7 @@ public class TextFileReader implements Iterator<Pair<String,String>> {
 		public TextFileReader(String folderPath) {
 			File folder = new File(folderPath);
 			this.files = folder.listFiles();
+			Arrays.sort(this.files); // sort lexicographically so output is deterministic
 			this.curFile = 0;
 		}
 		
